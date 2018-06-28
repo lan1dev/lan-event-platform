@@ -4,6 +4,7 @@ const bunyan = require('bunyan');
 const passport = require('passport');
 const memwatch = require('memwatch-next');
 const compression = require('compression');
+const bodyParser = require('body-parser');
 const localSignupStrategy = require('./passport/local-signup');
 const localLoginStrategy = require('./passport/local-login');
 const bunyanConfig = require('./configs/bunyan');

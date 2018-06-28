@@ -1,6 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const bunyan = require('bunyan');
+const passport = require('passport');
+const localSignupStrategy = require('./passport/local-signup');
+const localLoginStrategy = require('./passport/local-login');
 const bunyanConfig = require('./configs/bunyan');
 const db = require('./models');
 
@@ -24,3 +27,8 @@ const errorHandler = error => {
 };
 
 db.connect(process.env.MONGODB_URI, errorHandler);
+
+// Init passport
+app.use(passport.initialize());
+passport.use('local-signup', localSignupStrategy);
+passport.use('local-login', localLoginStrategy);

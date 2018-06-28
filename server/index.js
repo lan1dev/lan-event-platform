@@ -42,3 +42,6 @@ memwatch.on('leak', info => {
 
 // Compress responses
 app.use(compression());
+
+// Start application
+app.listen(port);

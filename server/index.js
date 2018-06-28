@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const bunyan = require('bunyan');
 const bunyanConfig = require('./configs/bunyan');
+const db = require('./models');
+
 
 // Set port, init express
 const port = process.env.PORT || 8080;

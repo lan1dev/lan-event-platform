@@ -50,4 +50,6 @@ app.use('/', routes);
 
 
 // Start application
-app.listen(port);
+app.listen(port, () => {
+  console.log(`${process.env.APP_NAME} listening on port ${port}`);
+});

@@ -1,4 +1,5 @@
-const User = require('mongoose').model('User');
+// const User = require('mongoose').model('User');
+import User from '../models/User';
 const PassportLocalStrategy = require('passport-local').Strategy;
 const localSignupConfig = require('../configs/local-signup');
 

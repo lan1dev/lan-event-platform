@@ -1,9 +1,10 @@
 {
-  "name": "lan_platform",
+  "name": "lan_platform_backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/JohanG2012/LAN_Platform#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1",
     "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",
     "bunyan": "^1.8.12",
@@ -26,7 +32,11 @@
     "jsonwebtoken": "^8.3.0",
     "memwatch-next": "^0.3.0",
     "mongoose": "^5.1.7",
+    "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "validator": "^10.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
   }
 }

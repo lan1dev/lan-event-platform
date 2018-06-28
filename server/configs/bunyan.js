@@ -1,3 +1,5 @@
+import path from 'path';
+
 module.exports = {
   name: process.env.APP_NAME,
   streams: [
@@ -7,7 +9,7 @@ module.exports = {
     },
     {
       level: 'info',
-      path: `${process.env.SERVER_ROOT}/logs/app.json` // log ERROR and above to a file
+      path: path.join(process.env.SERVER_ROOT, '/logs/app.json') // log ERROR and above to a file
     }
   ]
 };

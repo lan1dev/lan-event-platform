@@ -5,6 +5,10 @@ const authCheckMiddleware = require('../middleware/auth-check');
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 router.use('/api', authCheckMiddleware);
 router.use('/api', api);
 router.use('/auth', auth);

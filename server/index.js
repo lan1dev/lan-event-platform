@@ -3,6 +3,7 @@ const express = require('express');
 const bunyan = require('bunyan');
 const passport = require('passport');
 const memwatch = require('memwatch-next');
+const compression = require('compression');
 const localSignupStrategy = require('./passport/local-signup');
 const localLoginStrategy = require('./passport/local-login');
 const bunyanConfig = require('./configs/bunyan');
@@ -38,3 +39,6 @@ passport.use('local-login', localLoginStrategy);
 memwatch.on('leak', info => {
   log.fatal('Memory leak detected:', info);
 });
+
+// Compress responses
+app.use(compression());

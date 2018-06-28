@@ -18,3 +18,9 @@ app.use((req, res, next) => {
 
 // Init bunyan logger
 const log = bunyan.createLogger(bunyanConfig);
+
+const errorHandler = error => {
+  log.error(error);
+};
+
+db.connect(process.env.MONGODB_URI, errorHandler);

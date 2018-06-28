@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const bunyan = require('bunyan');
 const passport = require('passport');
+const memwatch = require('memwatch-next');
 const localSignupStrategy = require('./passport/local-signup');
 const localLoginStrategy = require('./passport/local-login');
 const bunyanConfig = require('./configs/bunyan');
@@ -32,3 +33,8 @@ db.connect(process.env.MONGODB_URI, errorHandler);
 app.use(passport.initialize());
 passport.use('local-signup', localSignupStrategy);
 passport.use('local-login', localLoginStrategy);
+
+// Watch for memory leaks, log leaks as fatal
+memwatch.on('leak', info => {
+  log.fatal('Memory leak detected:', info);
+});

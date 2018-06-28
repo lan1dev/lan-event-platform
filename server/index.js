@@ -8,6 +8,7 @@ const localSignupStrategy = require('./passport/local-signup');
 const localLoginStrategy = require('./passport/local-login');
 const bunyanConfig = require('./configs/bunyan');
 const db = require('./models');
+const routes = require('./routes');
 
 
 // Set port, init express
@@ -42,6 +43,10 @@ memwatch.on('leak', info => {
 
 // Compress responses
 app.use(compression());
+
+// Add routes
+app.use('/', routes);
+
 
 // Start application
 app.listen(port);

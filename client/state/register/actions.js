@@ -1,73 +1,44 @@
 import Client from '../../libs/Client';
 import types from './types';
 
-/**
- * registerIsLoading Action Creator
- * @param  {boolean} isLoading isLoading? True/False
- * @return {object}            Action Object
- */
-export const registerIsLoading = isLoading => ({
-  type: types.REGISTER_IS_LOADING,
+export const userRegisterLoading = isLoading => ({
+  type: types.USER_REGISTER_LOADING,
   isLoading
 });
 
-/**
- * registerHasError Action Creator
- * @param  {boolean} hasError     hasError? True/False
- * @param  {string}  errorMessage Error Message
- * @return {object}               Action Object
- */
-export const registerHasError = (hasError, errorMessages) => ({
-  type: types.REGISTER_HAS_ERROR,
-  hasError,
-  errorMessages
+export const userRegisterFailed = errors => ({
+  type: types.USER_REGISTER_FAILED,
+  errors
 });
 
-/**
- * registerPostDataSuccess Action Creator
- * @param  {boolean} isSuccess      isSuccess? True/False
- * @param  {string}  successMessage Success Message
- * @return {object}                 Action Object
- */
-export const registerPostDataSuccess = (isSuccess, successMessage) => ({
-  type: types.REGISTER_POST_DATA_SUCCESS,
-  isSuccess,
-  successMessage
+export const userRegisterSuccess = messages => ({
+  type: types.USER_REGISTER_SUCCESS,
+  messages
 });
 
-/**
- * [clearForm description]
- * @return {[type]} [description]
- */
-export const clearForm = () => dispatch => {
-  dispatch(registerHasError(false, ''));
-  dispatch(registerIsLoading(false));
-  dispatch(registerPostDataSuccess(false, ''));
+export const userRegisterClear = () => dispatch => {
+  dispatch(userRegisterFailed(false, ''));
+  dispatch(userRegisterLoading(false));
+  dispatch(userRegisterSuccess(false, ''));
 };
 
-/**
- * [registerPostData description]
- * @param  {[type]} url    [description]
- * @param  {[type]} fields [description]
- * @return {[type]}        [description]
- */
-export const registerPostData = (url, fields) => async dispatch => {
-  dispatch(registerIsLoading(true));
+export const userRegisterRequest = (url, fields) => async dispatch => {
+  dispatch(userRegisterLoading(true));
   const result = await Client.POST(url, fields);
 
   if (!result.success) {
-    dispatch(registerHasError(true, result.errors));
+    dispatch(userRegisterFailed(true, result.errors));
   } else {
-    dispatch(registerIsLoading(false));
-    dispatch(registerPostDataSuccess(true, 'success'));
+    dispatch(userRegisterLoading(false));
+    dispatch(userRegisterSuccess(true, 'success'));
   }
   return result;
 };
 
 export default {
-  registerIsLoading,
-  registerHasError,
-  registerPostDataSuccess,
-  registerPostData,
-  clearForm
+  userRegisterLoading,
+  userRegisterFailed,
+  userRegisterSuccess,
+  userRegisterRequest,
+  userRegisterClear
 };

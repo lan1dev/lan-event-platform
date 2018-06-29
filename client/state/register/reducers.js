@@ -1,63 +1,33 @@
-import { combineReducers } from 'redux';
 import types from './types';
 
-/**
- * registerIsLoading Reducer
- * @param  {boolean} [state=false] State
- * @param  {object}  action        Action Object
- * @return {object}                Updated State
- */
-const registerIsLoading = (state = false, action) => {
-  switch (action.type) {
-    case types.REGISTER_IS_LOADING:
-      return action.isLoading;
-
-    default:
-      return state;
-  }
+const initalState = {
+  isLoading: false,
+  success: false,
+  errors: [],
+  messages: []
 };
 
-/**
- * registerHasError Reducer
- * @param  {boolean} [state=false] State
- * @param  {object}  action        Action Object
- * @return {object}                Updated State
- */
-const registerHasError = (state = false, action) => {
+const registerReducer = (state = initalState, action) => {
   switch (action.type) {
-    case types.REGISTER_HAS_ERROR:
+    case types.USER_REGISTER_LOADING:
       return {
-        hasError: action.hasError,
-        errorMessages: action.errorMessages
+        ...state,
+        isLoading: action.isLoading
       };
-
-    default:
-      return state;
-  }
-};
-
-/**
- * registerPostDataSuccess Reducer
- * @param  {boolean} [state=false] State
- * @param  {object}  action        Action Object
- * @return {object}                Updated State
- */
-const registerPostDataSuccess = (state = false, action) => {
-  switch (action.type) {
-    case types.REGISTER_POST_DATA_SUCCESS:
+    case types.USER_REGISTER_FAILED:
       return {
-        isSuccess: action.isSuccess,
-        successMessage: action.successMessage
+        ...state,
+        errors: [...state.errors, ...action.errors]
+      };
+    case types.USER_REGISTER_SUCCESS:
+      return {
+        ...state,
+        messages: [...state.messages, ...action.messages],
+        success: true
       };
     default:
       return state;
   }
 };
-
-const registerReducer = combineReducers({
-  registerIsLoading,
-  registerHasError,
-  registerPostDataSuccess
-});
 
 export default registerReducer;

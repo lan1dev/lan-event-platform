@@ -4,6 +4,10 @@ Start docker:
 
 `docker-compose up -d`
 
+Site available at:
+
+`http://localhost:3000`
+
 ## if you whish to Start the Back-end environment only
 
 Go to folder:

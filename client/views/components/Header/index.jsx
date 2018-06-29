@@ -12,7 +12,7 @@ const Header = () => (
       <Menu items={menuConfig} />
     </FlexBox>
     <div>
-      <Link to="/login">Login</Link> /<Link to="Register">Register</Link>
+      <Link to="/login">Login</Link> / <Link to="Register">Register</Link>
     </div>
   </Wrapper>
 );

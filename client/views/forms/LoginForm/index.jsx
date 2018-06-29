@@ -15,7 +15,7 @@ const defaultProps = {
 const propTypes = {
   sendForm: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  isLoggedIn: PropTypes.func.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
   errors: PropTypes.arrayOf(PropTypes.string)
 };
 

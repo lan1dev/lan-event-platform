@@ -9,12 +9,13 @@ import LogoutPageContainer from '../containers/LogoutPageContainer';
 import AuthRoute from './AuthRoute';
 
 /**
- * User Routes
+ * Admin Routes
  */
-const UserRoutes = () => (
+const AdminRoutes = () => (
   <Switch>
     <AuthRoute path="/dashboard" component={DashboardHome} />
     <AuthRoute path="/logout" component={LogoutPageContainer} />
+    <AuthRoute path="/dashboard/tickets" component={TicketsPage} />
   </Switch>
 );
 
@@ -26,8 +27,7 @@ const Routes = () => (
     <Route exact path="/" component={HomePage} />
     <Route path="/register" component={RegisterPage} />
     <Route path="/login" component={LoginPage} />
-    <Route path="/dashboard/tickets" component={TicketsPage} />
-    <UserRoutes />
+    <AdminRoutes />
   </Switch>
 );
 

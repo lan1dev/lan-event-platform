@@ -1,0 +1,39 @@
+version: "3.5"
+
+services:
+  node:
+    build: server
+    container_name: lan1-server
+    depends_on:
+      - mongo
+    ports:
+      - 9001:8080
+    environment:
+      - PORT=8080
+      - APP_NAME=Lan-Platform
+      - SERVER_ROOT=.
+      - MONGODB_URI=mongodb://development:development@mongo:27017/lan1-dev?authSource=admin
+      - CHOKIDAR_USEPOLLING=true
+      - JWT_SECRET=keyboardcat
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
+    command: yarn dev
+  mongo:
+    image: clutteredcode/mongo-alpine
+    environment:
+      - MONGO_USERNAME=development
+      - MONGO_PASSWORD=development
+    container_name: lan1-db
+    expose:
+      - "27017"
+    volumes:
+      - db:/data/db
+  mongodata:
+    image: tianon/true
+    container_name: lan1-mongodata
+    volumes:
+      - db:/data/db
+
+volumes:
+  db:

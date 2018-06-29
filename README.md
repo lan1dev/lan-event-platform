@@ -1,24 +1,20 @@
-## Start both Front-end & Back-end environments
+## Start both frontend & backend
 
 Start docker:
 
 `docker-compose up -d`
 
-Site available at:
+Site available (after a minute or two) at:
 
 `http://localhost:3000`
 
-## if you whish to Start the Back-end environment only
+## Start backend only
 
-Go to folder:
+Start docker with the alternative docker-compose file:
 
-`cd server`
+`docker-compose up -f docker-compose.backend-only.yml -d`
 
-Start docker:
-
-`docker-compose up -d`
-
-## if you wish to start the Front-end environment (API against docker)
+## Start frontend only (API against docker)
 
 Go to folder:
 
@@ -26,13 +22,13 @@ Go to folder:
 
 Install dependencies:
 
-`npm install`
+`npm install` or `yarn`
 
 Start Front-end Dev-server:
 
-`npm run startDev`
+`npm run startDev` or `yarn startDev`
 
-## if you wish to start the Front-end environment (API against staging)
+## Start the frontend only (API against staging)
 
 Go to folder:
 
@@ -40,8 +36,8 @@ Go to folder:
 
 Install dependencies:
 
-`npm install`
+`npm install` or `yarn`
 
 Start Front-end Dev-server:
 
-`npm start`
+`npm start` or `yarn start`

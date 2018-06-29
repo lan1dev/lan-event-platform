@@ -44,7 +44,7 @@ class RegisterForm extends Component {
         >
           Register
         </Button>
-        {success && <Redirect to="/" />}
+        {success && <Redirect to="/login" />}
       </Form>
     );
   }

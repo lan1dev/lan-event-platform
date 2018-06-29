@@ -10,7 +10,7 @@ const tickets = ['Under 20 år', 'Över 20 år'];
 /**
  * DashboardPage for the /dashboard route
  */
-const TicketsPage = () => (
+const DashboardTickets = () => (
   <DashboardBase>
     <Title>Tickets</Title>
     <Modal background="lightgray">
@@ -20,4 +20,4 @@ const TicketsPage = () => (
   </DashboardBase>
 );
 
-export default TicketsPage;
+export default DashboardTickets;

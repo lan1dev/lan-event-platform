@@ -27,7 +27,7 @@ const Routes = () => (
     <Route exact path="/" component={HomePage} />
     <Route path="/register" component={RegisterPage} />
     <Route path="/login" component={LoginPage} />
-    <AdminRoutes />
+    <AdminRoutes test />
   </Switch>
 );
 

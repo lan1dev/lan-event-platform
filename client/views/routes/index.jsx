@@ -8,6 +8,8 @@ import LoginPage from '../pages/LoginPage';
 import LogoutPageContainer from '../containers/LogoutPageContainer';
 import AuthRoute from './AuthRoute';
 
+/* eslint-disable react/no-multi-comp */
+
 /**
  * Admin Routes
  */

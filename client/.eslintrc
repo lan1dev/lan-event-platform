@@ -11,6 +11,7 @@
             "components": []
           }],
         "react/jsx-one-expression-per-line": 0,
+        "react/no-multi-comp": ["error", { "ignoreStateless": false }],
         "prettier/prettier": "error",
     },
   "env":{

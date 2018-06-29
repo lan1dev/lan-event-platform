@@ -28,6 +28,7 @@
   },
   "homepage": "",
   "dependencies": {
+    "core-js": "^2.5.7",
     "dotenv": "^6.0.0",
     "history": "^4.7.2",
     "jwt-decode": "^2.2.0",

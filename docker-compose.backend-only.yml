@@ -18,18 +18,7 @@ services:
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules
-    command: yarn && yarn dev
-  react:
-    build: client
-    container_name: lan1-client
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    volumes:
-      - ./client:/usr/src/app
-      - /usr/src/app/node_modules
-    ports:
-      - 3000:3000
-    command: yarn && yarn startDev
+    command: yarn dev
   mongo:
     image: clutteredcode/mongo-alpine
     environment:

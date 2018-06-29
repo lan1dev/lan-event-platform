@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import LoginForm from '../forms/LoginForm';
 import { performLogin } from '../../state/session/actions';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import RegisterPage from '../pages/RegisterPage';
-import DashboardPageContainer from '../containers/DashboardPageContainer';
+import DashboardHome from '../pages/DashboardHome';
 import TicketsPage from '../pages/TicketsPage';
 import LoginPage from '../pages/LoginPage';
 import LogoutPageContainer from '../containers/LogoutPageContainer';
@@ -13,7 +13,7 @@ import AuthRoute from './AuthRoute';
  */
 const UserRoutes = () => (
   <Switch>
-    <AuthRoute path="/dashboard" component={DashboardPageContainer} />
+    <AuthRoute path="/dashboard" component={DashboardHome} />
     <AuthRoute path="/logout" component={LogoutPageContainer} />
   </Switch>
 );

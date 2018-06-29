@@ -23,6 +23,9 @@ app.use((req, res, next) => {
   next();
 });
 
+// Configure body parser
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // Init bunyan logger
 const log = bunyan.createLogger(bunyanConfig);
 

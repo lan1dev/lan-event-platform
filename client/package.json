@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --inline --open",
     "startDev":
-      "webpack-dev-server --define process.env.HOST='\"DEVELOPMENT\"' --hot --inline --open",
+      "webpack-dev-server --define process.env.HOST='\"DEVELOPMENT\"' --hot --inline --host 0.0.0.0",
     "bundle": "webpack",
     "precommit": "lint-staged"
   },

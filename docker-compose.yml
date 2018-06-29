@@ -14,10 +14,22 @@ services:
       - SERVER_ROOT=.
       - MONGODB_URI=mongodb://development:development@mongo:27017/lan1-dev?authSource=admin
       - CHOKIDAR_USEPOLLING=true
+      - JWT_SECRET=keyboardcat
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules
     command: yarn dev
+  react:
+    build: client
+    container_name: lan1-client
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+    command: yarn startDev
   mongo:
     image: clutteredcode/mongo-alpine
     environment:

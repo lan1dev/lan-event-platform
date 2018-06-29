@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import RegisterPage from '../pages/RegisterPage';
 import DashboardHome from '../pages/DashboardHome';
-import TicketsPage from '../pages/TicketsPage';
+import DashboardTickets from '../pages/DashboardTickets';
 import LoginPage from '../pages/LoginPage';
 import LogoutPageContainer from '../containers/LogoutPageContainer';
 import AuthRoute from './AuthRoute';
@@ -17,7 +17,7 @@ const AdminRoutes = () => (
   <Switch>
     <AuthRoute path="/dashboard" component={DashboardHome} />
     <AuthRoute path="/logout" component={LogoutPageContainer} />
-    <AuthRoute path="/dashboard/tickets" component={TicketsPage} />
+    <AuthRoute path="/dashboard/tickets" component={DashboardTickets} />
   </Switch>
 );
 

@@ -41,3 +41,13 @@ Install dependencies:
 Start Front-end Dev-server:
 
 `npm start` or `yarn start`
+
+## Run Front-end tests
+
+Go to folder:
+
+`cd client`
+
+Run test coverage:
+
+`npm run testcoverage`

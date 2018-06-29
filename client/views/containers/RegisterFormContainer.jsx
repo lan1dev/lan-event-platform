@@ -1,14 +1,11 @@
 import { connect } from 'react-redux';
 
 import RegisterForm from '../forms/RegisterForm';
-import { createFlash } from '../../state/layout/actions';
 import { registerPostData } from '../../state/register/actions';
 
 /* eslint-disable require-jsdoc */
 const mapDispatchToProps = dispatch => ({
-  sendForm: (url, fields) => dispatch(registerPostData(url, fields)),
-  showError: message => dispatch(createFlash('error', message)),
-  showSuccess: message => dispatch(createFlash('success', message))
+  sendForm: (url, fields) => dispatch(registerPostData(url, fields))
 });
 
 const mapStateToProps = state => ({

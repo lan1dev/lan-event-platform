@@ -12,10 +12,8 @@ const Menu = ({ items }) => (
   <Fragment>
     <MenuList>
       {items.map(item => (
-        <li>
-          <Link key={item.href} to={item.href}>
-            {item.name}
-          </Link>
+        <li key={item.href}>
+          <Link to={item.href}>{item.name}</Link>
         </li>
       ))}
     </MenuList>

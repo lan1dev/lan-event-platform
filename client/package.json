@@ -5,16 +5,13 @@
   "main": "index.jsx",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --open",
-    "startDev": "webpack-dev-server --define process.env.HOST='\"DEVELOPMENT\"' --hot --inline --open",
+    "startDev":
+      "webpack-dev-server --define process.env.HOST='\"DEVELOPMENT\"' --hot --inline --open",
     "bundle": "webpack",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier --write",
-      "git add",
-      "eslint"
-    ]
+    "*.{js,jsx}": ["prettier --write", "git add", "eslint"]
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
 {
-  "name": "lan_platform_backend",
+  "name": "lan-platform-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/JohanG2012/LAN_Platform.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "bugs": {
     "url": "https://github.com/JohanG2012/LAN_Platform/issues"
   },

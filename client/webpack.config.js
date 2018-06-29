@@ -33,10 +33,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015'],
-          plugins: [
-            'babel-plugin-transform-class-properties',
-            'transform-object-rest-spread'
-          ]
+          plugins: ['babel-plugin-transform-class-properties', 'transform-object-rest-spread']
         }
       },
       {
@@ -48,6 +45,9 @@ module.exports = {
 
   // start Webpack in a watch mode, so Webpack will rebuild the bundle on changes
   watch: true,
+  watchOptions: {
+    ignored: /node_modules/
+  },
   resolve: {
     extensions: ['.js', '.jsx']
   }

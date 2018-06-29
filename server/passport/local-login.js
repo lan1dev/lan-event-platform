@@ -38,7 +38,7 @@ const authenticate = (req, email, password, done) => {
         username: user.profile.name
       };
 
-      const token = jwt.sign(payload, process.env.jwtSecret);
+      const token = jwt.sign(payload, process.env.JWT_SECRET);
       const data = {
         name: user.name
       };

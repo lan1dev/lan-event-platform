@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier"
+    ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+        "jsx-a11y/anchor-is-valid": [ "error", {
+            "components": []
+          }],
+        "prettier/prettier": "error",
+    },
+  "env":{
+    "browser": true,
+    "node": true,
+    "jest": true,
+    },
+    "parser": "babel-eslint"
+}

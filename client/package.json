@@ -1,0 +1,76 @@
+{
+  "name": "lan-platform-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline --open",
+    "startDev":
+      "webpack-dev-server --define process.env.HOST='\"DEVELOPMENT\"' --hot --inline --open",
+    "bundle": "webpack",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.jsx": ["prettier --write", "git add", "eslint"]
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GNU GPLv3",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "history": "^4.7.2",
+    "jwt-decode": "^2.2.0",
+    "prop-types": "^15.6.0",
+    "raf": "^3.4.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^3.1.6",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^23.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-class-property": "^1.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.2.0",
+    "jest-localstorage-mock": "^2.2.0",
+    "jest-styled-components": "^5.0.1",
+    "prettier": "^1.10.2",
+    "react-test-render": "^1.1.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.13.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

@@ -5,13 +5,16 @@
   "main": "index.jsx",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --open",
-    "startDev":
-      "webpack-dev-server --define process.env.HOST='\"DEVELOPMENT\"' --hot --inline --open",
+    "startDev": "webpack-dev-server --define process.env.HOST='\"DEVELOPMENT\"' --hot --inline --open",
     "bundle": "webpack",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["prettier --write", "git add", "eslint"]
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add",
+      "eslint"
+    ]
   },
   "repository": {
     "type": "git",
@@ -37,6 +40,7 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.2",
+    "redux-form": "^7.4.2",
     "redux-thunk": "^2.2.0",
     "styled-components": "^3.1.6",
     "webfontloader": "^1.6.28"

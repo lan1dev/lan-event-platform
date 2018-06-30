@@ -10,7 +10,8 @@
     "bundle": "webpack",
     "precommit": "lint-staged",
     "postinstall": "sh docker-yarn.sh",
-    "testcoverage": "jest --env=jsdom --coverage"
+    "testcoverage": "jest --env=jsdom --coverage",
+    "test": "jest --env=jsdom"
   },
   "lint-staged": {
     "*.{js,jsx}": ["prettier --write", "git add", "eslint"]

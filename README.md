@@ -51,3 +51,7 @@ Go to folder:
 Run test coverage:
 
 `npm run testcoverage`
+
+Run tests:
+
+`npm tests`

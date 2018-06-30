@@ -14,16 +14,20 @@ Alternatively, run `docker-compose up -d` for detached mode (don't show logs). T
 
 ### Useful docker commands
 
-`docker ps` View all running docker containers
-`docker logs $container_name` View container logs (use `docker ps` to see container names)
-`docker restart $container_name` Restart single container
-`docker exec -it $container_name /bin/ash` Enter container
+|command|effect|
+|-------|------|
+|`docker ps`|View all running docker containers|
+|`docker logs $container_name`|View container logs (use `docker ps` to see container names)|  
+|`docker restart $container_name`|Restart single container|  
+|`docker exec -it $container_name /bin/ash`|Enter container|  
 
 The following commands must be run in the lan-event-platform root directory:
 
-`docker-compose down` Stop all running containers 
-`docker-compose restart` Restart all running containers
-`docker-compose build` Rebuild containers (hopefully won't be necessary!)
+|command|effect|
+|-------|------|
+|`docker-compose down`|Stop all running containers|
+|`docker-compose restart`|Restart all running containers|
+|`docker-compose build`|Rebuild containers (hopefully won't be necessary!)|
 
 ## Start backend only
 

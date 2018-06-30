@@ -1,12 +1,29 @@
 ## Start both frontend & backend
 
-Start docker:
+Start all docker containers (in a separate terminal window):
 
-`docker-compose up -d`
+`docker-compose up`
 
 Site available (after a minute or two) at:
 
 `http://localhost:3000`
+
+Press `Ctrl+C` to stop all containers.
+
+Alternatively, run `docker-compose up -d` for detached mode (don't show logs). To stop them, run `docker-compose down`.
+
+### Useful docker commands
+
+`docker ps` View all running docker containers
+`docker logs $container_name` View container logs (use `docker ps` to see container names)
+`docker restart $container_name` Restart single container
+`docker exec -it $container_name /bin/ash` Enter container
+
+The following commands must be run in the lan-event-platform root directory:
+
+`docker-compose down` Stop all running containers 
+`docker-compose restart` Restart all running containers
+`docker-compose build` Rebuild containers (hopefully won't be necessary!)
 
 ## Start backend only
 

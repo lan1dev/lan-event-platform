@@ -9,12 +9,10 @@ const defaultProps = {
 
 const propTypes = {
   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
-  access: PropTypes.arrayOf(PropTypes.string).isRequired,
-  role: PropTypes.string.isRequired,
   isLoggedIn: PropTypes.bool
 };
 
-const AuthRoute = ({ component: Component, access, isLoggedIn, ...rest }) => (
+const AuthRoute = ({ component: Component, isLoggedIn, ...rest }) => (
   <Route
     {...rest}
     render={props => (isLoggedIn ? <Component {...props} /> : <Redirect to="/" />)}
@@ -22,7 +20,7 @@ const AuthRoute = ({ component: Component, access, isLoggedIn, ...rest }) => (
 );
 
 const mapStateToProps = state => ({
-  isLoggedIn: state.session.loggedInAs.isLoggedIn
+  isLoggedIn: state.user.isLoggedIn
 });
 
 AuthRoute.defaultProps = defaultProps;

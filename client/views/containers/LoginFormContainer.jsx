@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
 import LoginForm from '../forms/LoginForm';
-import { performLogin } from '../../state/session/actions';
+import { sessionLoginRequest } from '../../state/session/actions';
+import { getLoginErrors } from '../../state/session/selectors';
+import { getUser } from '../../state/user/selectors';
 
 /* eslint-disable require-jsdoc */
 const mapDispatchToProps = dispatch => ({
-  sendForm: (url, fields) => dispatch(performLogin(url, fields))
+  sendForm: (url, fields) => dispatch(sessionLoginRequest(url, fields))
 });
 
 const mapStateToProps = state => ({
-  isLoggedIn: state.session.loggedInAs.isLoggedIn,
-  errors: state.session.loginHasError.errorMessages
+  isLoggedIn: getUser(state).isLoggedIn,
+  errors: getLoginErrors(state)
 });
 /* eslint-enable require-jsdoc */
 

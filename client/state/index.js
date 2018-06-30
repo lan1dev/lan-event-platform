@@ -7,6 +7,7 @@ import { reducer as form } from 'redux-form';
 import { apiMiddleware } from 'redux-api-middleware';
 import registerReducer from './register';
 import sessionReducer from './session';
+import userReducer from './user';
 
 const history = createHistory();
 const Router = routerMiddleware(history);
@@ -15,6 +16,7 @@ const composeEnhancers = composeWithDevTools({});
 const rootReducer = combineReducers({
   register: registerReducer,
   session: sessionReducer,
+  user: userReducer,
   router,
   form
 });

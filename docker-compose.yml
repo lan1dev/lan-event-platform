@@ -18,7 +18,7 @@ services:
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules
-    command: yarn && yarn dev
+    command: ash -c "yarn && yarn dev"
   react:
     build: client
     container_name: lan1-client
@@ -29,7 +29,7 @@ services:
       - /usr/src/app/node_modules
     ports:
       - 3000:3000
-    command: yarn && yarn startDev
+    command: ash -c "yarn && yarn startDev"
   mongo:
     image: clutteredcode/mongo-alpine
     environment:

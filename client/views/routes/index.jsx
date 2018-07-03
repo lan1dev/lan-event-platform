@@ -6,7 +6,7 @@ import DashboardHome from '../pages/DashboardHome';
 import DashboardTickets from '../pages/DashboardTickets';
 import LoginPage from '../pages/LoginPage';
 import LogoutPageContainer from '../containers/LogoutPageContainer';
-import AuthRoute from './AuthRoute';
+import DashboardSponsors from '../pages/DashboardSponsors';
 
 /* eslint-disable react/no-multi-comp */
 
@@ -15,9 +15,10 @@ import AuthRoute from './AuthRoute';
  */
 const AdminRoutes = () => (
   <Switch>
-    <AuthRoute path="/dashboard" component={DashboardHome} />
-    <AuthRoute path="/logout" component={LogoutPageContainer} />
-    <AuthRoute path="/dashboard/tickets" component={DashboardTickets} />
+    <Route exact path="/dashboard" component={DashboardHome} />
+    <Route path="/logout" component={LogoutPageContainer} />
+    <Route path="/dashboard/tickets" component={DashboardTickets} />
+    <Route path="/dashboard/sponsors" component={DashboardSponsors} />
   </Switch>
 );
 

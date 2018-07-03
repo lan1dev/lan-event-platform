@@ -8,6 +8,10 @@ const sidebarConfig = [
     href: '/dashboard/tickets'
   },
   {
+    name: 'Sponsors',
+    href: '/dashboard/sponsors'
+  },
+  {
     name: 'Logout',
     href: '/logout'
   }

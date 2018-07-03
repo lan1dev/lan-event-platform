@@ -33,7 +33,7 @@ The following commands must be run in the lan-event-platform root directory:
 
 Start docker with the alternative docker-compose file:
 
-`docker-compose up -f docker-compose.backend-only.yml -d`
+`docker-compose -f docker-compose.backend-only.yml up -d`
 
 ## Start frontend only (API against docker)
 

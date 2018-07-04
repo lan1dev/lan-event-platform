@@ -22,7 +22,7 @@ module.exports = {
   ],
   devServer: {
     port: 3000,
-    historyApiFallback: true
+    historyApiFallback: { index: `${paths.DIST}/index.html` }
   },
   module: {
     // apply rules to files that meet given conditions

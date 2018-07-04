@@ -27,10 +27,10 @@ export const userRegisterRequest = (url, fields) => async dispatch => {
   const result = await Client.POST(url, fields);
 
   if (!result.success) {
-    dispatch(userRegisterFailed(true, result.errors));
+    dispatch(userRegisterFailed(result.errors));
   } else {
     dispatch(userRegisterLoading(false));
-    dispatch(userRegisterSuccess(true, 'success'));
+    dispatch(userRegisterSuccess('success'));
   }
   return result;
 };

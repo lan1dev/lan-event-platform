@@ -14,6 +14,10 @@ const sidebarConfig = [
   {
     name: 'Logout',
     href: '/logout'
+  },
+  {
+    name: 'Tournaments',
+    href: '/dashboard/tournaments'
   }
 ];
 

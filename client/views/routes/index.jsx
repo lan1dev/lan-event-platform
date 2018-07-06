@@ -8,7 +8,7 @@ import LoginPage from '../pages/LoginPage';
 import LogoutPageContainer from '../containers/LogoutPageContainer';
 import DashboardSponsors from '../pages/DashboardSponsors';
 import DashboardTournaments from '../pages/DashboardTournaments';
-import ActivatePage from '../pages/AccountActivate';
+import AccountActivatedPage from '../pages/AccountActivate';
 
 /**
  * Routes component, return frontend routes
@@ -23,7 +23,7 @@ const Routes = () => (
     <Route path="/dashboard/tickets" component={DashboardTickets} />
     <Route path="/dashboard/tournaments" component={DashboardTournaments} />
     <Route path="/dashboard/sponsors" component={DashboardSponsors} />
-    <Route path="/activate" component={ActivatePage} />
+    <Route path="/user/activated" component={AccountActivatedPage} />
   </Switch>
 );
 

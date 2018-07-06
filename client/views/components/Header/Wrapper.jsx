@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
+/* eslint-disable react/destructuring-assignment */
 const Wrapper = styled.div`
   height: 50px;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: ${props => (props.primary ? 'none' : '1px solid black')};
   line-height: 50px;
   display: flex;
   justify-content: space-between;

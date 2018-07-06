@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../constants/colors';
+import colors from '../../constants/colors';
 
 /* eslint-disable react/destructuring-assignment */
 const Layout = styled.div`

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import colors from '../constants/colors';
-import fonts from '../constants/fonts';
+import colors from '../../constants/colors';
+import fonts from '../../constants/fonts';
 
 const Footer = styled.footer`
   text-align: center;

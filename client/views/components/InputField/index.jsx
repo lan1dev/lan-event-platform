@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from './Input';
-import Text from './Text';
+import Input from '../Input';
+import Text from '../Text';
 
 const propTypes = {
   input: PropTypes.shape({}).isRequired,

@@ -1,8 +1,8 @@
 import React from 'react';
 import RegisterFormContainer from '../containers/RegisterFormContainer';
 import HomePageBase from './HomePageBase';
-import FlexBox from '../common/FlexBox';
-import Modal from '../common/Modal';
+import FlexBox from '../components/FlexBox';
+import Modal from '../components/Modal';
 
 /**
  * RegisterPage for the /register route

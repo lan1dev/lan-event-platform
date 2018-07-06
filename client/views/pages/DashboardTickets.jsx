@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../common/Button';
+import Button from '../components/Button';
 import DashboardBase from './DashboardBase';
-import Title from '../common/Title';
-import Modal from '../common/Modal';
+import Title from '../components/Title';
+import Modal from '../components/Modal';
 
 // Temp Mock data
 const tickets = ['Under 20 år', 'Över 20 år'];

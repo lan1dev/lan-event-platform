@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import fonts from '../constants/fonts';
-import colors from '../constants/colors';
+import fonts from '../../constants/fonts';
+import colors from '../../constants/colors';
 
 /* eslint-disable react/destructuring-assignment */
 const Text = styled.p`

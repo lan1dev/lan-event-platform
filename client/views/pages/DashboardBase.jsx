@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Layout from '../common/Layout';
-import Main from '../common/Main';
-import Footer from '../common/Footer';
+import Layout from '../components/Layout';
+import Main from '../components/Main';
+import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
-import Header from '../common/Header';
+import Header from '../components/Header';
 
 const defaultProps = {
   children: 'page'
@@ -22,7 +22,7 @@ const DashboardBase = ({ children }) => (
   <Layout sidebar>
     <Sidebar />
     <Layout>
-      <Header />
+      <Header primary />
       <Main>{children}</Main>
       <Footer>LAN Platform ©2018</Footer>
     </Layout>

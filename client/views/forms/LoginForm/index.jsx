@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
-import InputField from '../../common/InputField';
-import Button from '../../common/Button';
-import Form from '../../common/Form';
-import Text from '../../common/Text';
+import InputField from '../../components/InputField';
+import Button from '../../components/Button';
+import Form from '../../components/Form';
+import Text from '../../components/Text';
 import { BASE_URI } from '../../../configs/URI';
 
 const defaultProps = {

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-import Modal from '../common/Modal';
+import Title from '../common/Title';
+import Button from '../common/Button';
 
 /**
  * * AccountActivatedPage for the root (/user/activated) route

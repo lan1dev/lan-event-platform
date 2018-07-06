@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 
 import LogoutPage from '../pages/LogoutPage';
-import { performLogout } from '../../state/session/actions';
+import { sessionLogoutRequest } from '../../state/session/actions';
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(performLogout())
+  logout: () => dispatch(sessionLogoutRequest())
 });
 
 export default connect(

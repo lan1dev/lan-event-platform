@@ -8,7 +8,7 @@ import LoginPage from '../pages/LoginPage';
 import LogoutPageContainer from '../containers/LogoutPageContainer';
 import DashboardSponsors from '../pages/DashboardSponsors';
 import DashboardTournaments from '../pages/DashboardTournaments';
-import AccountActivatedPage from '../pages/AccountActivate';
+import AccountActivatedPage from '../pages/AccountActivatedPage';
 
 /**
  * Routes component, return frontend routes

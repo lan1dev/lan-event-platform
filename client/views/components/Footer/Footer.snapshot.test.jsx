@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import 'jest-styled-components';
-import Footer from '../common/Footer';
+import Footer from './index';
 
 describe('Footer', () => {
   let props;

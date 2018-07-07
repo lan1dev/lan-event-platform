@@ -5,7 +5,7 @@ const menuConfig = [
   },
   {
     name: 'dashboard',
-    href: '/dashboard'
+    href: '/user/activated'
   }
 ];
 

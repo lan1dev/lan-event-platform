@@ -12,12 +12,12 @@ const sidebarConfig = [
     href: '/dashboard/sponsors'
   },
   {
-    name: 'Logout',
-    href: '/logout'
-  },
-  {
     name: 'Tournaments',
     href: '/dashboard/tournaments'
+  },
+  {
+    name: 'Logout',
+    href: '/logout'
   }
 ];
 

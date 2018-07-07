@@ -23,9 +23,9 @@
   "author": "",
   "license": "GPL-3.0-only",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/lan1dev/lan-event-platform"
   },
-  "homepage": "",
+  "homepage": "https://github.com/lan1dev/lan-event-platform",
   "dependencies": {
     "core-js": "^2.5.7",
     "dotenv": "^6.0.0",

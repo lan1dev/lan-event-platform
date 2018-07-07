@@ -12,7 +12,6 @@ const Footer = styled.footer`
   bottom: 0;
   left: 0;
   font-family: ${fonts.primary};
-  color: rgba(0, 0, 0, 0.65);
 `;
 
 export default Footer;

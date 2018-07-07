@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import menuConfig from '../../configs/menuConfig';
+import { getMenu } from '../../configs/menuConfig';
 import Menu from '../components/Menu';
 import FlexBox from '../components/FlexBox';
 import Footer from '../components/Footer';
@@ -20,7 +20,7 @@ const HomePageBase = ({ children }) => (
     <Header>
       <FlexBox>
         <Link to="/">Logo</Link>
-        <Menu horizontal items={menuConfig} />
+        <Menu horizontal items={getMenu()} />
       </FlexBox>
       <div>
         <Link to="/login">Login</Link> / <Link to="Register">Register</Link>

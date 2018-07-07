@@ -1,11 +1,11 @@
 import React from 'react';
 import Wrapper from './Wrapper';
-import sidebarConfig from '../../../configs/sidebarConfig';
+import { getSidebarMenu } from '../../../configs/menuConfig';
 import Menu from '../Menu';
 
 const Sidebar = () => (
   <Wrapper>
-    <Menu items={sidebarConfig} />
+    <Menu items={getSidebarMenu()} />
   </Wrapper>
 );
 

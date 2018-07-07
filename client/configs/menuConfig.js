@@ -1,12 +1,42 @@
 const menuConfig = [
   {
     name: 'Home',
-    href: '/'
+    href: '/',
+    location: 'menu'
   },
   {
     name: 'dashboard',
-    href: '/user/activated'
+    href: '/dashboard',
+    location: 'menu'
+  },
+  {
+    name: 'Home',
+    href: '/dashboard',
+    location: 'sidebar'
+  },
+  {
+    name: 'Tickets',
+    href: '/dashboard/tickets',
+    location: 'sidebar'
+  },
+  {
+    name: 'Sponsors',
+    href: '/dashboard/sponsors',
+    location: 'sidebar'
+  },
+  {
+    name: 'Tournaments',
+    href: '/dashboard/tournaments',
+    location: 'sidebar'
+  },
+  {
+    name: 'Logout',
+    href: '/logout',
+    location: 'sidebar'
   }
 ];
+
+export const getSidebarMenu = () => menuConfig.filter(item => item.location === 'sidebar');
+export const getMenu = () => menuConfig.filter(item => item.location === 'menu');
 
 export default menuConfig;

@@ -1,17 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Wrapper from './Wrapper';
+import styled from 'styled-components';
 
-const defaultProps = {
-  children: ''
-};
+/* eslint-disable react/destructuring-assignment */
+const Header = styled.header`
+  height: 50px;
+  width: 100%;
+  border-bottom: ${props => (props.primary ? 'none' : '1px solid black')};
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 0 20px;
+`;
 
-const propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-};
-
-const Header = ({ children, ...rest }) => <Wrapper {...rest}>{children}</Wrapper>;
-
-Header.defaultProps = defaultProps;
-Header.propTypes = propTypes;
 export default Header;

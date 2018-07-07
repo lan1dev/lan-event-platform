@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header with props Should match snapshot 1`] = `
+.c0 {
+  height: 50px;
+  width: 100%;
+  border-bottom: none;
+  line-height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: white;
+  padding: 0 20px;
+}
+
+<header
+  className="c0"
+/>
+`;
+
+exports[`Header without props Should match snapshot 1`] = `
+.c0 {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  line-height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: white;
+  padding: 0 20px;
+}
+
+<header
+  className="c0"
+/>
+`;

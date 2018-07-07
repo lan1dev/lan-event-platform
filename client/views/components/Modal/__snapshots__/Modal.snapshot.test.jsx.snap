@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal with background props Should match snapshot 1`] = `
+.c0 {
+  background: gray;
+  padding: 50px;
+  margin: 50px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Modal without props Should match snapshot 1`] = `
+.c0 {
+  background: white;
+  padding: 50px;
+  margin: 50px;
+}
+
+<div
+  className="c0"
+/>
+`;

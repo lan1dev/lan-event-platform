@@ -15,12 +15,12 @@
         "react/no-multi-comp": ["error", { "ignoreStateless": false }],
         "prettier/prettier": "error",
         "linebreak-style": 0,
-        "no-param-reassign": ["error", { "props": false }],
+        "no-param-reassign": ["error", { "props": false }]
     },
   "env":{
     "browser": true,
     "node": true,
-    "jest": true,
+    "jest": true
     },
     "parser": "babel-eslint"
 }

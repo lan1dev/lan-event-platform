@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title without props Should match snapshot 1`] = `
+.c0 {
+  text-align: center;
+}
+
+<h1
+  className="c0"
+/>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField with error prop Should match snapshot 1`] = `
+<div>
+  <styled.input />
+</div>
+`;
+
+exports[`InputField with error prop when not touched Should match snapshot 1`] = `
+<div>
+  <styled.input />
+</div>
+`;
+
+exports[`InputField with warning prop Should match snapshot 1`] = `
+<div>
+  <styled.input />
+</div>
+`;
+
+exports[`InputField with warning prop when not touched Should match snapshot 1`] = `
+<div>
+  <styled.input />
+</div>
+`;
+
+exports[`InputField without props Should match snapshot 1`] = `
+<div>
+  <styled.input />
+</div>
+`;

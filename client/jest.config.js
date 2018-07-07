@@ -1,6 +1,12 @@
 module.exports = {
   verbose: true,
-  collectCoverageFrom: ['./**/*.jsx', './**/*.js'],
+  collectCoverageFrom: [
+    './**/*.jsx',
+    './**/*.js',
+    '!./**/*.setup.js',
+    '!./**/*.config.js',
+    '!./coverage/lcov-report/*'
+  ],
   setupFiles: ['./jest.setup.js'],
   moduleDirectories: ['node_modules', '<rootDir>/src'],
   moduleFileExtensions: ['js', 'jsx'],

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main without props Should match snapshot 1`] = `
+.c0 {
+  padding: 30px;
+  background: #fff;
+  margin: 50px;
+}
+
+<main
+  className="c0"
+/>
+`;

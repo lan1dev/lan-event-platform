@@ -13,7 +13,12 @@
     "lint:css": "stylelint './**/*.jsx'"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["prettier --write", "git add", "eslint"]
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add",
+      "eslint",
+      "stylelint"
+    ]
   },
   "repository": {
     "type": "git",

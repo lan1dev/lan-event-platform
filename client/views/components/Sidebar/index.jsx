@@ -1,12 +1,9 @@
-import React from 'react';
-import Wrapper from './Wrapper';
-import { getSidebarMenu } from '../../../configs/menuConfig';
-import Menu from '../Menu';
+import styled from 'styled-components';
 
-const Sidebar = () => (
-  <Wrapper>
-    <Menu items={getSidebarMenu()} />
-  </Wrapper>
-);
+const Sidebar = styled.aside`
+  min-height: 100%;
+  width: 200px;
+  background: white;
+`;
 
 export default Sidebar;

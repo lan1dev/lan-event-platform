@@ -5,6 +5,8 @@ import Main from '../components/Main';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
+import { getSidebarMenu } from '../../configs/menuConfig';
+import Menu from '../components/Menu';
 
 const defaultProps = {
   children: 'page'
@@ -20,7 +22,9 @@ const propTypes = {
  */
 const DashboardBase = ({ children }) => (
   <Layout sidebar>
-    <Sidebar />
+    <Sidebar>
+      <Menu items={getSidebarMenu()} />
+    </Sidebar>
     <Layout>
       <Header primary />
       <Main>{children}</Main>

@@ -5,7 +5,7 @@ const menuConfig = [
     location: 'menu'
   },
   {
-    name: 'dashboard',
+    name: 'Dashboard',
     href: '/dashboard',
     location: 'menu'
   },

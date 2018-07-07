@@ -8,7 +8,7 @@ import Modal from '../components/Modal';
 const tournaments = ['Turnering nr1', 'Turnering nr2'];
 
 /**
- * DashboardPage for the /dashboard route
+ * DashboardPage for the /dashboard/tournaments route
  */
 const DashboardTournaments = () => (
   <DashboardBase>

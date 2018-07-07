@@ -8,7 +8,7 @@ import Modal from '../components/Modal';
 const sponsors = ['Sponsor nr1', 'Sponsor nr2'];
 
 /**
- * DashboardPage for the /dashboard route
+ * DashboardPage for the /dashboard/sponsors route
  */
 const DashboardSponsors = () => (
   <DashboardBase>

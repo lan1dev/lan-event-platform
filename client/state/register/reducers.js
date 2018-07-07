@@ -9,17 +9,17 @@ const initalState = {
 
 const registerReducer = (state = initalState, action) => {
   switch (action.type) {
-    case types.USER_REGISTER_LOADING:
+    case types.REGISTER_LOADING:
       return {
         ...state,
         isLoading: action.isLoading
       };
-    case types.USER_REGISTER_FAILED:
+    case types.REGISTER_FAILED:
       return {
         ...state,
         errors: [...state.errors, ...action.errors]
       };
-    case types.USER_REGISTER_SUCCESS:
+    case types.REGISTER_SUCCESS:
       return {
         ...state,
         messages: [...state.messages, ...action.messages],

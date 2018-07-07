@@ -2,17 +2,17 @@ import Client from '../../libs/Client';
 import types from './types';
 
 export const userRegisterLoading = isLoading => ({
-  type: types.USER_REGISTER_LOADING,
+  type: types.REGISTER_LOADING,
   isLoading
 });
 
 export const userRegisterFailed = errors => ({
-  type: types.USER_REGISTER_FAILED,
+  type: types.REGISTER_FAILED,
   errors
 });
 
 export const userRegisterSuccess = messages => ({
-  type: types.USER_REGISTER_SUCCESS,
+  type: types.REGISTER_SUCCESS,
   messages
 });
 

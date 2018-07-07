@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer when props are defined Should match snapshot 1`] = `
+.c0 {
+  text-align: center;
+  padding: 24px 50px;
+  color: #001529;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: Poppins;
+}
+
+<footer
+  className="c0"
+>
+  Text
+</footer>
+`;
+
+exports[`Footer when props are undefined Should match snapshot 1`] = `
+.c0 {
+  text-align: center;
+  padding: 24px 50px;
+  color: #001529;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: Poppins;
+}
+
+<footer
+  className="c0"
+/>
+`;

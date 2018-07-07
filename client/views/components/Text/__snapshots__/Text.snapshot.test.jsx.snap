@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text with error props Should match snapshot 1`] = `
+.c0 {
+  font-family: Poppins;
+  font-size: 14px;
+  display: block;
+  color: red;
+}
+
+<p
+  className="c0"
+/>
+`;
+
+exports[`Text with inline props Should match snapshot 1`] = `
+.c0 {
+  font-family: Poppins;
+  font-size: 14px;
+  display: inline;
+  color: rgba(0,0,0,0.65);
+}
+
+<p
+  className="c0"
+/>
+`;
+
+exports[`Text with small props Should match snapshot 1`] = `
+.c0 {
+  font-family: Poppins;
+  font-size: 12px;
+  display: block;
+  color: rgba(0,0,0,0.65);
+}
+
+<p
+  className="c0"
+/>
+`;
+
+exports[`Text without props Should match snapshot 1`] = `
+.c0 {
+  font-family: Poppins;
+  font-size: 14px;
+  display: block;
+  color: rgba(0,0,0,0.65);
+}
+
+<p
+  className="c0"
+/>
+`;

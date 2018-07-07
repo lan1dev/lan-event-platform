@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import MenuList from './MenuList';
@@ -9,15 +9,13 @@ const propTypes = {
 };
 
 const Menu = ({ items, ...rest }) => (
-  <Fragment>
-    <MenuList {...rest}>
-      {items.map(item => (
-        <li key={item.href}>
-          <Link to={item.href}>{item.name}</Link>
-        </li>
-      ))}
-    </MenuList>
-  </Fragment>
+  <MenuList {...rest}>
+    {items.map(item => (
+      <li key={item.href}>
+        <Link to={item.href}>{item.name}</Link>
+      </li>
+    ))}
+  </MenuList>
 );
 
 Menu.propTypes = propTypes;

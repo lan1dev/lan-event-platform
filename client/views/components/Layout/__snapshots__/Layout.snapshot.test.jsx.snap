@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout with sidebar props Should match snapshot 1`] = `
+.c0 {
+  background: #f0f2f5;
+  min-height: 100vh;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Layout without props Should match snapshot 1`] = `
+.c0 {
+  background: #f0f2f5;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  overflow-x: hidden;
+}
+
+<div
+  className="c0"
+/>
+`;

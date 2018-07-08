@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const ticketSchema = new mongoose.Schema({
   name: String,
-  prica: Number
+  price: Number
 });
 
 const Ticket = mongoose.model('Ticket', ticketSchema);

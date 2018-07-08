@@ -1,12 +1,19 @@
-import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import SectionTitle from './SectionTitle';
+import Wrapper from './Wrapper';
 
-/* eslint-disable react/destructuring-assignment */
-const Section = styled.section`
-  background: ${props => (props.background ? props.background : '#f0f2f5')};
-  height: 100vh;
-  margin: 0 auto;
-  max-width: 1500px;
-`;
-/* eslint-enable react/destructuring-assignment */
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+};
 
+const Section = ({ title, children }) => (
+  <Wrapper>
+    <SectionTitle>{title}</SectionTitle>
+    {children}
+  </Wrapper>
+);
+
+Section.propTypes = propTypes;
 export default Section;

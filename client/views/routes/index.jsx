@@ -25,7 +25,7 @@ const Routes = () => (
     <Route path="/dashboard/tournaments" component={DashboardTournaments} />
     <Route path="/dashboard/sponsors" component={DashboardSponsors} />
     <Route path="/user/activated" component={AccountActivatedPage} />
-    <Route path="/ForgotPasswordPage" component={ForgotPasswordPage} />
+    <Route path="/forgot-password" component={ForgotPasswordPage} />
   </Switch>
 );
 

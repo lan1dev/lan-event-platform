@@ -1,31 +1,31 @@
 const Ticket = require('../models/Ticket');
 
 const read = async (req, res) => {
-  const result = await Ticket.find({});
-  return result;
+  const tickets = await Ticket.find({});
+  return res.json(tickets);
 };
 
 const remove = async (req, res) => {
-  await Ticket.findOneAndDelete(req.body.id);
+  await Ticket.findOneAndDelete({ _id: req.params.id });
   return res.json('Ticket removed!');
 };
 
 const update = async (req, res) => {
-  await Ticket.findOneAndUpdate(req.body.id, req.body);
+  await Ticket.findOneAndUpdate({ _id: req.params.id }, req.body);
   return res.json('Ticket updated!');
 };
 
 const create = async (req, res) => {
   const ticket = new Ticket({
     name: req.body.name,
-    price: req.body.price
+    price: parseInt(req.body.price)
   });
   await ticket.save();
   return res.json('Ticket created!');
 };
 
 module.exports = {
-  find,
+  read,
   create,
   remove,
   update

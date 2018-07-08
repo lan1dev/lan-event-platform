@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JohanG2012/LAN_Platform.git"
+    "url": "https://github.com/lan1dev/lan-event-platform"
   },
   "author": "",
   "license": "GPL-3.0-only",
   "bugs": {
-    "url": "https://github.com/JohanG2012/LAN_Platform/issues"
+    "url": "https://github.com/lan1dev/lan-event-platform"
   },
-  "homepage": "https://github.com/JohanG2012/LAN_Platform#readme",
+  "homepage": "https://github.com/lan1dev/lan-event-platform",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -37,6 +37,16 @@
     "validator": "^10.4.0"
   },
   "devDependencies": {
-    "nodemon": "^1.17.5"
+    "babel-eslint": "^8.2.5",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-import": "^0.13.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "nodemon": "^1.17.5",
+    "prettier": "^1.13.7"
   }
 }

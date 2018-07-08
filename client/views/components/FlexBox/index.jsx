@@ -3,6 +3,7 @@ import styled from 'styled-components';
 /* eslint-disable react/destructuring-assignment */
 const FlexBox = styled.div`
   display: flex;
+  height: ${props => (props.height ? props.height : 'auto')};
   flex-direction: ${props => (props.direction ? props.direction : 'row')};
   justify-content: ${props => (props.justify ? props.justify : 'flex-start')};
   align-items: ${props => (props.align ? props.align : 'flex-start')};

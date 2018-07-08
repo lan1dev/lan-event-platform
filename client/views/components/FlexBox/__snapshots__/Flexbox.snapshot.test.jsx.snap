@@ -6,6 +6,7 @@ exports[`FlexBox with align prop Should match snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -30,6 +31,7 @@ exports[`FlexBox with direction prop Should match snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -55,6 +57,7 @@ exports[`FlexBox with jusify prop Should match snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -79,6 +82,7 @@ exports[`FlexBox without props Should match snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;

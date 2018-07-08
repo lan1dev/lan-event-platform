@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import LoginForm from '../forms/ForgotPWForm';
+import ForgotPWForm from '../forms/ForgotPWForm';
 import { sessionLoginRequest } from '../../state/session/actions';
 import { getLoginErrors } from '../../state/session/selectors';
 import { getUser } from '../../state/user/selectors';
@@ -18,4 +18,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LoginForm);
+)(ForgotPWForm);

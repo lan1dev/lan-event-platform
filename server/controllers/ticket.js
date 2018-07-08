@@ -10,7 +10,7 @@ const remove = async (req, res) => {
   return res.json('Ticket removed!');
 };
 
-const edit = async (req, res) => {
+const update = async (req, res) => {
   await Ticket.findOneAndUpdate(req.body.id, req.body);
   return res.json('Ticket updated!');
 };
@@ -22,4 +22,11 @@ const create = async (req, res) => {
   });
   await ticket.save();
   return res.json('Ticket created!');
+};
+
+module.exports = {
+  find,
+  create,
+  remove,
+  update
 };

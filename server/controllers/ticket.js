@@ -5,6 +5,7 @@ const read = async (req, res) => {
   return res.json(tickets);
 };
 
+
 const remove = async (req, res) => {
   await Ticket.findOneAndDelete({ _id: req.params.id });
   return res.json('Ticket removed!');

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "lint-staged"
+    "genapidocs": "apidoc -i ./ -o ../__apidocs__ -f './controllers/*'"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "validator": "^10.4.0"
   },
   "devDependencies": {
+    "apidoc": "^0.17.6",
     "babel-eslint": "^8.2.5",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",

@@ -14,7 +14,8 @@
         "import/no-commonjs": 2
     },
   "env":{
-    "node": true
+    "node": true,
+    "jest": true
     },
     "parser": "babel-eslint"
 }

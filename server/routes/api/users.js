@@ -1,10 +1,10 @@
-const express = require('express');
-const userController = require('../../controllers/user');
+import express from 'express';
+import { findOne, create } from '../../controllers/user';
 
 const router = express.Router();
 
-router.get('/:email', userController.find);
+router.get('/:email', findOne);
 
-router.post('/', userController.create);
+router.post('/', create);
 
-module.exports = router;
+export default router;

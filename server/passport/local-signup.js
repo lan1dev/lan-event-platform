@@ -1,7 +1,7 @@
 // const User = require('mongoose').model('User');
+import PassportLocal from 'passport-local';
 import User from '../models/User';
-const PassportLocalStrategy = require('passport-local').Strategy;
-const localSignupConfig = require('../configs/local-signup');
+import localSignupConfig from '../configs/local-signup';
 
 const register = (req, email, password, done) => {
   const userData = {
@@ -20,4 +20,4 @@ const register = (req, email, password, done) => {
   });
 };
 
-module.exports = new PassportLocalStrategy(localSignupConfig, register);
+export default new PassportLocal.Strategy(localSignupConfig, register);

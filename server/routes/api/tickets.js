@@ -1,14 +1,14 @@
-const express = require('express');
-const ticketController = require('../../controllers/ticket');
+import express from 'express';
+import { read, create, remove, update } from '../../controllers/ticket';
 
 const router = express.Router();
 
-router.get('/', ticketController.read);
+router.get('/', read);
 
-router.post('/', ticketController.create);
+router.post('/', create);
 
-router.delete('/:id', ticketController.remove);
+router.delete('/:id', remove);
 
-router.put('/:id', ticketController.update);
+router.put('/:id', update);
 
-module.exports = router;
+export default router;

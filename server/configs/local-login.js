@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   usernameField: 'email',
   passwordField: 'password',
   session: false,

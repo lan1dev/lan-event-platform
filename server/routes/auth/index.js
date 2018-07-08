@@ -1,6 +1,6 @@
-const express = require('express');
-const validator = require('validator');
-const passport = require('passport');
+import express from 'express';
+import validator from 'validator';
+import passport from 'passport';
 
 const router = new express.Router();
 
@@ -135,4 +135,4 @@ router.post('/login', (req, res, next) => {
   })(req, res, next);
 });
 
-module.exports = router;
+export default router;

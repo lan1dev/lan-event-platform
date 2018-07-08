@@ -1,22 +1,23 @@
-require('dotenv').config();
-const express = require('express');
-const bunyan = require('bunyan');
-const passport = require('passport');
-const memwatch = require('memwatch-next');
-const compression = require('compression');
-const bodyParser = require('body-parser');
-const localSignupStrategy = require('./passport/local-signup');
-const localLoginStrategy = require('./passport/local-login');
-const bunyanConfig = require('./configs/bunyan');
-const db = require('./models');
-const routes = require('./routes');
+import dotenv from 'dotenv';
+import express from 'express';
+import bunyan from 'bunyan';
+import passport from 'passport';
+import memwatch from 'memwatch-next';
+import compression from 'compression';
+import bodyParser from 'body-parser';
+import localSignupStrategy from './passport/local-signup';
+import localLoginStrategy from './passport/local-login';
+import bunyanConfig from './configs/bunyan';
+import connect from './models';
+import routes from './routes';
 
+dotenv.config();
 
 // Set port, init express
 const port = process.env.PORT || 8080;
 const app = express();
 
-//Allows CORS
+// Allows CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -33,7 +34,10 @@ const errorHandler = error => {
   log.error(error);
 };
 
-db.connect(process.env.MONGODB_URI, errorHandler);
+connect(
+  process.env.MONGODB_URI,
+  errorHandler
+);
 
 // Init passport
 app.use(passport.initialize());
@@ -50,7 +54,6 @@ app.use(compression());
 
 // Add routes
 app.use('/', routes);
-
 
 // Start application
 app.listen(port, () => {

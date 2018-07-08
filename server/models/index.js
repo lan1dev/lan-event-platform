@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-module.exports.connect = (uri, errorHandler) => {
+const connect = (uri, errorHandler) => {
   mongoose.connect(uri);
 
   mongoose.Promise = global.Promise;
@@ -9,3 +9,5 @@ module.exports.connect = (uri, errorHandler) => {
     errorHandler(`Mongoose connection error ${err}`);
   });
 };
+
+export default connect;

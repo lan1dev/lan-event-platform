@@ -1,12 +1,12 @@
-const User = require('../models/User');
+import User from '../models/User';
 
-const find = (req, res) => {
+export const findOne = (req, res) => {
   User.findOne({ username: req.params.username }, (error, result) => {
     res.json(result);
   });
 };
 
-const create = (req, res) => {
+export const create = (req, res) => {
   const user = new User({
     email: req.body.email,
     password: req.body.password
@@ -17,9 +17,4 @@ const create = (req, res) => {
   });
 
   res.json('User created');
-};
-
-module.exports = {
-  find,
-  create
 };

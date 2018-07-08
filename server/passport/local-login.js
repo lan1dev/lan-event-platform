@@ -1,7 +1,9 @@
-const jwt = require('jsonwebtoken');
-const User = require('mongoose').model('User');
-const PassportLocalStrategy = require('passport-local').Strategy;
-const localLoginConfig = require('../configs/local-login');
+import jwt from 'jsonwebtoken';
+import mongoose from 'mongoose';
+import PassportLocal from 'passport-local';
+import localLoginConfig from '../configs/local-login';
+
+const User = mongoose.model('User');
 
 const authenticate = (req, email, password, done) => {
   const userData = {
@@ -48,4 +50,4 @@ const authenticate = (req, email, password, done) => {
   });
 };
 
-module.exports = new PassportLocalStrategy(localLoginConfig, authenticate);
+export default new PassportLocal.Strategy(localLoginConfig, authenticate);

@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const { promisify } = require('util');
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
+import { promisify } from 'util';
 
 const genSalt = promisify(bcrypt.genSalt);
 const hash = promisify(bcrypt.hash);
@@ -36,4 +36,4 @@ userSchema.pre('save', async function saveHook(next) {
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User;

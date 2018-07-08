@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import InputField from '../../components/InputField';
+import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Form from '../../components/Form';
 import Text from '../../components/Text';
@@ -18,7 +18,7 @@ const propTypes = {
  */
 const ForgotPasswordForm = ({ errors }) => (
   <Form>
-    <InputField name="email" label="&#xf003; Enter your email address" type="email" />
+    <Input name="email" label="&#xf003; Enter your email address" type="email" />
     {errors.map(errorMessage => <Text error>{errorMessage}</Text>)}
     <Button primary type="submit">
       Recover Password

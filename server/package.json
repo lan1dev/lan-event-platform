@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js --exec babel-node",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "genapidocs": "apidoc -i ./ -o ../__apidocs__ -f './controllers/*'"
   },
   "repository": {
@@ -48,7 +48,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.3.0",
     "nodemon": "^1.17.5",
-    "prettier": "^1.13.7"
+    "prettier": "^1.13.7",
+    "supertest": "^3.1.0"
   }
 }

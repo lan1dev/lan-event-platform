@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionTitle without props Should match snapshot 1`] = `
+.c0 {
+  font-family: Poppins;
+  font-size: 28px;
+}
+
+<h2
+  className="c0"
+/>
+`;

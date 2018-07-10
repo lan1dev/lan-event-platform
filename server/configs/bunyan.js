@@ -1,7 +1,10 @@
 import path from 'path';
 
+const serverRoot = process.env.SERVER_ROOT || './';
+const name = process.env.APP_NAME || 'name';
+
 module.exports = {
-  name: process.env.APP_NAME,
+  name,
   streams: [
     {
       level: 'debug',
@@ -9,7 +12,7 @@ module.exports = {
     },
     {
       level: 'info',
-      path: path.join(process.env.SERVER_ROOT, '/logs/app.json') // log ERROR and above to a file
+      path: path.join(serverRoot, 'logs/app.json') // log ERROR and above to a file
     }
   ]
 };

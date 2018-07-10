@@ -11,7 +11,7 @@ import bunyanConfig from './configs/bunyan';
 import connect from './models';
 import routes from './routes';
 
-dotenv.config();
+dotenv.config({ path: '/env' });
 
 // Set port, init express
 const port = process.env.PORT || 8080;
@@ -34,8 +34,10 @@ const errorHandler = error => {
   log.error(error);
 };
 
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/app';
+
 connect(
-  process.env.MONGODB_URI,
+  mongoURI,
   errorHandler
 );
 

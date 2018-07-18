@@ -30,6 +30,11 @@ const menuConfig = [
     location: 'sidebar'
   },
   {
+    name: 'QRScanner',
+    href: '/dashboard/QRScanner',
+    location: 'sidebar'
+  },
+  {
     name: 'Logout',
     href: '/logout',
     location: 'sidebar'

@@ -10,6 +10,7 @@ import DashboardSponsors from '../pages/DashboardSponsors';
 import DashboardTournaments from '../pages/DashboardTournaments';
 import AccountActivatedPage from '../pages/AccountActivatedPage';
 import ForgotPasswordPage from '../pages/ForgotPasswordPage';
+import DashboardQRScanner from '../pages/DashboardQRScanner';
 
 /**
  * Routes component, return frontend routes
@@ -26,6 +27,7 @@ const Routes = () => (
     <Route path="/dashboard/sponsors" component={DashboardSponsors} />
     <Route path="/user/activated" component={AccountActivatedPage} />
     <Route path="/forgot-password" component={ForgotPasswordPage} />
+    <Route path="/dashboard/QRScanner" component={DashboardQRScanner} />
   </Switch>
 );
 

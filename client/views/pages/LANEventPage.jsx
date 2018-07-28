@@ -6,19 +6,23 @@ import Button from '../components/Button';
 /**
  * DashboardPage for the /dashboard route
  */
+const AlignCenter = {
+  textAlign: 'center'
+};
+
 const LANPage = () => (
   <HomePageBase>
     <Modal>
       <FlexBox direction="row" align="center" height="60%">
         <div>
           <img alt="LAN" src="https://picsum.photos/1725/400" />
-          <div align="center">
-            <h1>Jullovslan</h1>
-            <img alt="LAN" src="https://picsum.photos/300/200" align="right" />
-            <p>
+          <div>
+            <h1 style={AlignCenter}>Jullovslan</h1>
+            <p style={AlignCenter}>
               hejeaojsdioajsiodjasoidjasiodjioasjdoiasjdiojdsoidmfiosdmfiosdmfiomsdiofmsdiofmsiodfmoisdmfoisdmfoisdmfosmdofimsdiofm
             </p>
-            <p>TOIAJSIODJAOSIDJIOAJDIOJ</p>
+            <p style={AlignCenter}>TOIAJSIODJAOSIDJIOAJDIOJ</p>
+            <img alt="LAN" src="https://picsum.photos/300/200" align="right" />
           </div>
           <div>
             <p>Datum: 25:e December</p>

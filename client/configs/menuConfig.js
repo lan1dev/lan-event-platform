@@ -5,6 +5,11 @@ const menuConfig = [
     location: 'menu'
   },
   {
+    name: 'LAN-Events',
+    href: '/lan',
+    location: 'menu'
+  },
+  {
     name: 'Dashboard',
     href: '/dashboard',
     location: 'menu'
